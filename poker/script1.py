@@ -49,6 +49,12 @@ rf52.fit(X, y)
 rf52_score = cross_val_score(rf52, X, y)
 print("rf52_score.mean() = {0}".format(rf52_score.mean()))
 
+rf52extra = ExtraTreesClassifier(n_estimators=52, max_depth=None)
+rf52extra.fit(X, y)
+rf52extra_score = cross_val_score(rf52extra, X, y)
+print("rf52extra_score.mean() = {0}".format(rf52extra_score.mean()))
+
+
 # rfex52 = ExtraTreesClassifier(n_estimators=13)
 # rfex52.fit(X, y)
 # rfex52_score = cross_val_score(rfex52, X, y)
